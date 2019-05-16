@@ -29,13 +29,11 @@ Serial = serial.Serial(PORT, BAUD_RATE, timeout=STD_TIMEOUT,  dsrdtr=False)
 
 def _serial_write(message: str):
     data = message.encode("utf-8")
-    print("Sending: ", data)
     Serial.write(data)
 
 
 def _serial_read(count=1):
     data = Serial.read(count)
-    print("Received: ", data)
     return data
 
 
