@@ -51,7 +51,7 @@ def digital_read(pin: int):
 def analog_read(pin: int):
     _serial_write("3/1/" + str(pin) + "/")
     time.sleep(STD_TIMEOUT)
-    return _serial_read(count=8)
+    return _serial_read(count=10)
 
 
 def digital_write(pin: int, value: int):
